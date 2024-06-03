@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+		xmlns:devtesttoolsbyavalonia="using:DevTestToolsByAvalonia"
+        x:Class="DevTestToolsByAvalonia.TableInfoDetailWindow"
+        Title="TableInfoDetailWindow">
+
+	<Grid ShowGridLines="True" Margin="5"
+      ColumnDefinitions="200, 200,100 "
+      RowDefinitions="400, auto, auto">
+		<DataGrid Name="TableDetailInfoGrid"
+			Grid.Row="0"
+				  Grid.Column="0"
+				  Grid.ColumnSpan="3"
+				  Margin="20"
+				  x:DataType="devtesttoolsbyavalonia:TableDetailInfo"
+          IsReadOnly="True"
+          CanUserReorderColumns="True"
+          CanUserResizeColumns="True"
+          CanUserSortColumns="False"
+          GridLinesVisibility="All"
+          BorderThickness="1" BorderBrush="Gray">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="COLUMN_NAME" Binding="{Binding COLUMN_NAME}"/>
+				<DataGridTextColumn Header="DATA_TYPE" Binding="{Binding DATA_TYPE}" />
+				<DataGridTextColumn Header="COLUMN_COMMENT" Binding="{Binding COLUMN_COMMENT}"/>
+				<DataGridTextColumn Header="IS_NULLABLE" Binding="{Binding IS_NULLABLE}"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<Button Grid.Row="1" Grid.Column="0" Margin="10 10" Click="btnCreatModel_Click"  HorizontalAlignment="Center">Creat Json</Button>
+		<Button Grid.Row="1" Grid.Column="1" Margin="10 10"  Click="btnCreatJsonWithComment_Click" HorizontalAlignment="Center">Creat Model</Button>
+	</Grid>
+
+</Window>
