@@ -2,12 +2,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"xmlns:devtesttoolsbyavalonia="using:DevTestToolsByAvalonia"
-        mc:Ignorable="d" d:DesignWidth="550" d:DesignHeight="500"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
         x:Class="DevTestToolsByAvalonia.MainWindow"
         Title="DevTestToolsByAvalonia">
 	
-	<Grid ShowGridLines="True" Margin="5"
-      ColumnDefinitions="150, 300,100"
+	<Grid ShowGridLines="False" Margin="5"
+      ColumnDefinitions="200, 400,200"
       RowDefinitions="Auto, auto, 400">
 		<Label Grid.Row="0" Grid.Column="0" Margin="0 10" HorizontalAlignment="Center">Conection String </Label>
 		<TextBox Name="ConnectString" Grid.Row="0" Grid.Column="1" Width="300"  Margin="0 5" Text="Server=10.20.30.100;Port=3306;Database=shwebautocangchu;Uid=root;Pwd=;charset=utf8;SslMode=None;AllowLoadLocalInfile=true;"/>

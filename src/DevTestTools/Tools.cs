@@ -43,7 +43,7 @@ namespace DevTestTools.UI
                     break;
             }
             if (string.IsNullOrEmpty(result))
-                MessageBox.Show("出现未知类型：" + orginDataType);
+                MessageBox.Show(new Notification("错误信息标题", "错误信息的内容！", NotificationType.Error));
             if (result != "string")
                 if (IsNull.ToLower() == "yes")
                     result += "?";

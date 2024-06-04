@@ -23,6 +23,7 @@ namespace DevTestToolsByAvalonia
         public MainWindow()
         {
             InitializeComponent();
+            this.filter.IsReadOnly = true;
         }
         public void ButtonClicked(object source, RoutedEventArgs args)
         {
@@ -44,51 +45,9 @@ namespace DevTestToolsByAvalonia
             }
             SourceTable = dataTableInfos;
             DataTableInfoGrid.ItemsSource = SourceTable;
-
-            //dataGridTableInfo.ItemsSource = dataTableInfos;
-            //this.SreachBox.IsReadOnly = false;
-            //txtConnectionString.IsReadOnly = true;
+            filter.IsReadOnly = false;
+            ConnectString.IsReadOnly = true;
         }
-        ///// <summary>
-        ///// 单击添加姓名
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //private void ButtonAddName_Click(object sender, RoutedEventArgs e)
-        //{
-        //    string dbconnectionstring = txtConnectionString.Text;
-        //    Regex regex = new Regex("(?<=(database|Database)=).*?(?=;)");
-        //    Match match = regex.Match(dbconnectionstring);
-        //    string databasename = match.Groups[0].Value;
-        //    DataBaseName = databasename;
-        //    string baseSqlText = string.Format(@"select table_name,TABLE_COMMENT from information_schema.tables where table_schema='{0}' and table_type='base table';", databasename);
-        //    // string baseSqlText2 = "select TABLE_NAME,TABLE_COMMENT from information_schema.tables";
-        //    DataTable dt = new();
-        //    conn = GetConnection(dbconnectionstring);
-        //    var cmd = conn.CreateCommand() as MySqlCommand;
-        //    cmd.CommandText = baseSqlText;
-        //    dt.Load(cmd.ExecuteReader());
-        //    List<DataTableInfo> dataTableInfos = new();
-        //    foreach (DataRow dr in dt.Rows)
-        //    {
-        //        dataTableInfos.Add(new DataTableInfo { TableName = dr[0].ToString(), TableComment = dr[1].ToString() });
-        //    }
-        //    dataGridTableInfo.ItemsSource = dataTableInfos;
-        //    this.SreachBox.IsReadOnly = false;
-        //    txtConnectionString.IsReadOnly = true;
-        //}
-
-        ///// <summary>
-        ///// 打开一个新的窗口
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //private void ButtonOpenNewWindow_Click(object sender, RoutedEventArgs e)
-        //{
-        //    TableInfoDetailWindow openNewWindow = new TableInfoDetailWindow();
-        //    openNewWindow.Show();
-        //}
-
         private IDbConnection GetConnection(string connstr)
         {
             conn = new MySqlConnection(connstr);
@@ -124,10 +83,5 @@ namespace DevTestToolsByAvalonia
                 tidw.TableDetailInfoGrid.ItemsSource = tdiList;
             }
         }
-        //private void Button_Click_1(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        //{
-        //    TableInfoDetailWindow openNewWindow = new TableInfoDetailWindow();
-        //    openNewWindow.Show();
-        //}
     }
 }
