@@ -23,4 +23,9 @@ namespace DevTestToolsByAvalonia
         public string COLUMN_COMMENT { get; set; }
         public string IS_NULLABLE { get; set; }
     }
+    public class JsonModel {
+
+        public string? Key { get; set; }
+        public string? Value { get; set; }
+    }
 }
