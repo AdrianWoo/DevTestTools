@@ -83,5 +83,11 @@ namespace DevTestToolsByAvalonia
                 tidw.TableDetailInfoGrid.ItemsSource = tdiList;
             }
         }
+
+        public void Button_Json_Clicked(object source, RoutedEventArgs args)
+        {
+            JsonResultWindow jr = new JsonResultWindow();
+            jr.Show();
+        }
     }
 }
