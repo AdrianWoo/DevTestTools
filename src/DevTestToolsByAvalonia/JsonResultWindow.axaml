@@ -6,6 +6,7 @@
         x:Class="DevTestToolsByAvalonia.JsonResultWindow"
 		xmlns:devtesttoolsbyavalonia="using:DevTestToolsByAvalonia"
         Title="JsonResultWindow"
+		TransparencyLevelHint="AcrylicBlur"
 	Width="800" Height="600">
 	
 	<Grid ShowGridLines="False" Margin="0"

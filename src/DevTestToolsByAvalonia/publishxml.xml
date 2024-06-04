@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Publish xmlns="https://github.com/avaloniaui">
+	<Executables>
+		<Executable Identifier="DevTestToolsByAvalonia"
+					MainClass="DevTestToolsByAvalonia.Program"
+					OutputName="DevTestToolsByAvalonia" />
+	</Executables>
+	<VersionInfo CompanyName="AdrianWu(Wzy)"
+				 Description="DevTestToolsByAvalonia"
+				 ProductName="DevTestToolsByAvalonia"
+				 AssemblyVersion="1.0.0"
+				 FileVersion="1.0.0" />
+</Publish>

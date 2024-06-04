@@ -6,6 +6,7 @@
 		xmlns:devtesttoolsbyavalonia="using:DevTestToolsByAvalonia"
         x:Class="DevTestToolsByAvalonia.TableInfoDetailWindow"
         Title="TableInfoDetailWindow"
+		TransparencyLevelHint="AcrylicBlur"
 		Width="800" Height="500">
 
 	<Grid ShowGridLines="False" Margin="5"
