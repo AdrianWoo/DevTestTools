@@ -5,10 +5,11 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
 		xmlns:devtesttoolsbyavalonia="using:DevTestToolsByAvalonia"
         x:Class="DevTestToolsByAvalonia.TableInfoDetailWindow"
-        Title="TableInfoDetailWindow">
+        Title="TableInfoDetailWindow"
+		Width="800" Height="500">
 
 	<Grid ShowGridLines="False" Margin="5"
-      ColumnDefinitions="200, 400,200 "
+      ColumnDefinitions="200, 200,400 "
       RowDefinitions="400, auto, auto">
 		<DataGrid Name="TableDetailInfoGrid"
 			Grid.Row="0"
@@ -31,6 +32,8 @@
 		</DataGrid>
 		<Button Grid.Row="1" Grid.Column="0" Margin="10 10" Click="btnCreatModel_Click"  HorizontalAlignment="Center">Creat Json</Button>
 		<Button Grid.Row="1" Grid.Column="1" Margin="10 10"  Click="btnCreatJsonWithComment_Click" HorizontalAlignment="Center">Creat Model</Button>
+		<Label Grid.Row="1" Grid.Column="2" Margin="40 10" HorizontalAlignment="Left">列名筛选 </Label>
+		<TextBox Name="Sreach_column" Grid.Row="1" Grid.Column="2" Width="150"  Margin="0 5" TextChanged="Sreach_column_TextChanged" />
 	</Grid>
 
 </Window>

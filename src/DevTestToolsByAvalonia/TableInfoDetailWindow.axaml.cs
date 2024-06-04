@@ -9,16 +9,18 @@ using MsBox.Avalonia;
 using System.Collections.Generic;
 using System.Text;
 using Tmds.DBus.Protocol;
+using System.Linq;
 
 namespace DevTestToolsByAvalonia;
 
 public partial class TableInfoDetailWindow : Window
 {
-    private WindowNotificationManager? _manager;
+    public List<TableDetailInfo> SourceTable;
 
-    public TableInfoDetailWindow()
+    public TableInfoDetailWindow(List<TableDetailInfo> detailInfos)
     {
         InitializeComponent();
+        SourceTable = detailInfos;
     }
 
     private void btnCreatModel_Click(object sender, RoutedEventArgs e)
@@ -69,4 +71,11 @@ public partial class TableInfoDetailWindow : Window
         Clipboard?.SetTextAsync(builder.ToString());
         MessageBoxManager.GetMessageBoxStandard("生成成功", "代码已经复制到剪贴板！", ButtonEnum.Ok).ShowAsync();
     }
+
+    private void Sreach_column_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        var list = SourceTable.Where(x => x.COLUMN_NAME.Contains(Sreach_column.Text.ToLower()) || x.COLUMN_COMMENT.Contains(Sreach_column.Text.ToLower()));
+        TableDetailInfoGrid.ItemsSource = list;
+    }
+
 }

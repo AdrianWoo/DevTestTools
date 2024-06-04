@@ -77,7 +77,7 @@ namespace DevTestToolsByAvalonia
                 {
                     tdiList.Add(new TableDetailInfo { COLUMN_NAME = dr[0].ToString(), DATA_TYPE = dr[1].ToString(), COLUMN_COMMENT = dr[2].ToString(), IS_NULLABLE = dr[3].ToString() });
                 }
-                TableInfoDetailWindow tidw = new TableInfoDetailWindow();
+                TableInfoDetailWindow tidw = new TableInfoDetailWindow(tdiList);
                 tidw.Show();
                 tidw.Title = tbi.TableName;
                 tidw.TableDetailInfoGrid.ItemsSource = tdiList;
