@@ -69,7 +69,7 @@ public partial class TableInfoDetailWindow : Window
 
     private void Sreach_column_TextChanged(object sender, TextChangedEventArgs e)
     {
-        var list = SourceTable.Where(x => x.COLUMN_NAME.Contains(Sreach_column.Text.ToLower()) || x.COLUMN_COMMENT.Contains(Sreach_column.Text.ToLower()));
+        var list = SourceTable.Where(x => x.COLUMN_NAME.Contains(Sreach_column.Text, System.StringComparison.CurrentCultureIgnoreCase) || x.COLUMN_COMMENT.Contains(Sreach_column.Text, System.StringComparison.CurrentCultureIgnoreCase));
         TableDetailInfoGrid.ItemsSource = list;
     }
 
