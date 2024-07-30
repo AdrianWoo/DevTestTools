@@ -48,7 +48,7 @@ namespace DevTestToolsByAvalonia
             return conn;
         }
 
-        private void Sreach_TextChanged(object sender, TextChangedEventArgs e)
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
         {
             var list = SourceTable.Where(x => x.TableName.Contains(filter.Text.ToLower()) || x.TableComment.Contains(filter.Text.ToLower()));
             DataTableInfoGrid.ItemsSource = list;

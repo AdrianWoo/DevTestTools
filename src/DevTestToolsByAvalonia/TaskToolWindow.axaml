@@ -33,6 +33,6 @@
 		<Button Grid.Row="1" Grid.Column="0" Margin="10 10" HorizontalAlignment="Center">Creat Json</Button>
 		<Button Grid.Row="1" Grid.Column="1" Margin="10 10"  HorizontalAlignment="Center">Creat Model</Button>
 		<Label Grid.Row="1" Grid.Column="2" Margin="40 10" HorizontalAlignment="Left">列名筛选 </Label>
-		<TextBox Name="Sreach_column" Grid.Row="1" Grid.Column="2" Width="150"  Margin="0 5"/>
+		<TextBox Name="Search_column" Grid.Row="1" Grid.Column="2" Width="150"  Margin="0 5"/>
 	</Grid>
 </Window>
