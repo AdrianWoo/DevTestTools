@@ -113,11 +113,14 @@ namespace DevTestTools
         {
             if (obj is DataTableInfo)
             {
+                int a = 5;
+
                 var text = SreachBox.Text.ToLower();
                 return (obj as DataTableInfo).TableName.ToLower().Contains(text)
                     || (obj as DataTableInfo).TableComment.ToLower().Contains(text);
             }
             return false;
+
         }
     }
 }

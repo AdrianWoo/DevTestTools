@@ -28,4 +28,12 @@ namespace DevTestToolsByAvalonia
         public string? Key { get; set; }
         public string? Value { get; set; }
     }
+
+    public class TaskDetailInfo() { 
+    
+        public string? TaskName { get; set; }
+        public string? Point { get; set; }
+        public string? HostNum { get; set; }
+        public string? State { get; set; }
+    }
 }

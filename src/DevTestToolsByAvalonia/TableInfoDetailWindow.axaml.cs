@@ -47,6 +47,7 @@ public partial class TableInfoDetailWindow : Window
             builder.Append("\r\n");
         }
         builder.Append("\r\n }");
+        builder.Append("\r\n }");
         Clipboard?.SetTextAsync(builder.ToString());
         MessageBoxManager.GetMessageBoxStandard("生成成功", "代码已经复制到剪贴板！", ButtonEnum.Ok).ShowAsync();
     }
