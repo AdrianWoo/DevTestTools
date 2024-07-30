@@ -23,12 +23,12 @@ public partial class TableInfoDetailWindow : Window
         Tools tools = new Tools();
         List<TableDetailInfo>? dtlist = TableDetailInfoGrid.ItemsSource as List<TableDetailInfo>;
         StringBuilder builder = new StringBuilder();
-        builder.Append("\r using System;");
-        builder.Append("\r\n using Newtonsoft.Json;");
-        builder.Append("\r\n using System.Linq;");
-        builder.Append("\r\n using System.Text;");
-        builder.Append("\r\n namespace " + "你的命名空间");
-        builder.Append("\r\n {");
+        builder.Append("using System;");
+        builder.Append("\rusing Newtonsoft.Json;");
+        builder.Append("\rusing System.Linq;");
+        builder.Append("\rusing System.Text;");
+        builder.Append("\rnamespace " + "你的命名空间");
+        builder.Append("\r\n\n {");
         builder.Append("\r\n/// <summary>");
         builder.Append("\r\n///");
         builder.Append("\r\n/// </summary>");
@@ -46,7 +46,7 @@ public partial class TableInfoDetailWindow : Window
             builder.Append(" { get; set; }");
             builder.Append("\r\n");
         }
-        builder.Append("\r\n }");
+        builder.Append("\r\n\n }");
         builder.Append("\r\n }");
         Clipboard?.SetTextAsync(builder.ToString());
         MessageBoxManager.GetMessageBoxStandard("生成成功", "代码已经复制到剪贴板！", ButtonEnum.Ok).ShowAsync();
