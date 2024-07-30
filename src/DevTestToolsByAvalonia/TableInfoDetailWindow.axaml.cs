@@ -18,7 +18,7 @@ public partial class TableInfoDetailWindow : Window
         SourceTable = detailInfos;
     }
 
-    private void btnCreatModel_Click(object sender, RoutedEventArgs e)
+    private void btnCrateModel_Click(object sender, RoutedEventArgs e)
     {
         Tools tools = new Tools();
         List<TableDetailInfo>? dtlist = TableDetailInfoGrid.ItemsSource as List<TableDetailInfo>;
@@ -52,7 +52,7 @@ public partial class TableInfoDetailWindow : Window
         MessageBoxManager.GetMessageBoxStandard("生成成功", "代码已经复制到剪贴板！", ButtonEnum.Ok).ShowAsync();
     }
 
-    private void btnCreatJsonWithComment_Click(object sender, RoutedEventArgs e)
+    private void btnCrateJsonWithComment_Click(object sender, RoutedEventArgs e)
     {
         List<TableDetailInfo>? dtlist = this.TableDetailInfoGrid.ItemsSource as List<TableDetailInfo>;
         StringBuilder builder = new StringBuilder();
@@ -68,9 +68,9 @@ public partial class TableInfoDetailWindow : Window
         MessageBoxManager.GetMessageBoxStandard("生成成功", "代码已经复制到剪贴板！", ButtonEnum.Ok).ShowAsync();
     }
 
-    private void Sreach_column_TextChanged(object sender, TextChangedEventArgs e)
+    private void Search_column_TextChanged(object sender, TextChangedEventArgs e)
     {
-        var list = SourceTable.Where(x => x.COLUMN_NAME.Contains(Sreach_column.Text, System.StringComparison.CurrentCultureIgnoreCase) || x.COLUMN_COMMENT.Contains(Sreach_column.Text, System.StringComparison.CurrentCultureIgnoreCase));
+        var list = SourceTable.Where(x => x.COLUMN_NAME.Contains(Search_column.Text, System.StringComparison.CurrentCultureIgnoreCase) || x.COLUMN_COMMENT.Contains(Sreach_column.Text, System.StringComparison.CurrentCultureIgnoreCase));
         TableDetailInfoGrid.ItemsSource = list;
     }
 
